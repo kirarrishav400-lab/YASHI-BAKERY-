@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yashi Bakery & Doodh Dairy - Fresh dairy and bakery products in Guna, Madhya Pradesh.">
+  <title>Yashi Bakery & Doodh Dairy | Guna</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="#home"><span>YASHI</span> BAKERY</a>
+    <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#products">Products</a>
+      <a href="#order">Order</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#location">Location</a>
+      <a href="#feedback">Feedback</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <p class="eyebrow">FRESH • DELICIOUS • MADE WITH CARE</p>
+        <h1>Yashi Bakery<br><em>& Doodh Dairy</em></h1>
+        <p class="hero-text">Fresh dairy essentials and delicious bakery products for your everyday moments.</p>
+        <div class="hero-actions">
+          <a href="#order" class="btn btn-primary">Order Now</a>
+          <a href="#products" class="btn btn-light">Explore Products</a>
+        </div>
+        <div class="hero-info">
+          <span>🥛 Fresh Dairy</span><span>🍰 Bakery Treats</span><span>📍 Guna, M.P.</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/gallery-1.jpg" alt="Yashi Bakery storefront">
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div>
+        <p class="eyebrow accent">WELCOME TO YASHI</p>
+        <h2>Freshness you can trust.<br>Goodness you can taste.</h2>
+      </div>
+      <p>From daily dairy essentials to cakes, pastries and bakery treats, Yashi Bakery & Doodh Dairy brings together freshness, quality and delicious taste under one roof.</p>
+    </section>
+
+    <section class="section products" id="products">
+      <div class="section-heading">
+        <p class="eyebrow accent">WHAT WE OFFER</p>
+        <h2>Our Products</h2>
+        <p>Popular dairy and bakery products available at our shop.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card"><div class="icon">🥛</div><h3>Fresh Milk</h3><p>Fresh milk for your daily needs.</p></article>
+        <article class="product-card"><div class="icon">🥣</div><h3>Curd</h3><p>Fresh and creamy dairy goodness.</p></article>
+        <article class="product-card"><div class="icon">🧈</div><h3>Butter & Ghee</h3><p>Rich taste for every kitchen.</p></article>
+        <article class="product-card"><div class="icon">🥤</div><h3>Buttermilk</h3><p>Refreshing dairy drinks.</p></article>
+        <article class="product-card"><div class="icon">🧀</div><h3>Paneer & Khoya</h3><p>Quality ingredients for meals and sweets.</p></article>
+        <article class="product-card"><div class="icon">🍰</div><h3>Cakes & Pastries</h3><p>Sweet treats for every celebration.</p></article>
+        <article class="product-card"><div class="icon">🍩</div><h3>Donuts & Muffins</h3><p>Delicious bakery favourites.</p></article>
+        <article class="product-card"><div class="icon">🧁</div><h3>More Bakery Items</h3><p>Visit us to explore more.</p></article>
+      </div>
+    </section>
+
+    <section class="section order" id="order">
+      <div class="order-copy">
+        <p class="eyebrow">PLACE AN ENQUIRY</p>
+        <h2>Want to order something?</h2>
+        <p>Select what you are looking for and send us your enquiry. We will contact you using the details you provide.</p>
+        <div class="order-photo"><img src="assets/gallery-7.jpg" alt="Bakery products at Yashi Bakery"></div>
+      </div>
+      <form class="order-form" onsubmit="submitForm(event, 'order')">
+        <label>Your Name<input required name="name" placeholder="Enter your name"></label>
+        <label>Phone Number<input required name="phone" type="tel" placeholder="Enter your phone number"></label>
+        <label>What would you like to order?
+          <select name="product">
+            <option>Milk / Dairy Product</option>
+            <option>Curd / Buttermilk</option>
+            <option>Paneer / Butter / Ghee</option>
+            <option>Cake</option>
+            <option>Pastry / Bakery Product</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>Message<textarea name="message" rows="4" placeholder="Quantity or special request"></textarea></label>
+        <button class="btn btn-primary wide" type="submit">Send Order Enquiry</button>
+        <p class="form-note">For quick contact, call us directly.</p>
+        <a class="phone-link" href="tel:+91971130001">📞 97113 0001</a>
+      </form>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading">
+        <p class="eyebrow accent">A LOOK INSIDE</p>
+        <h2>Our Gallery</h2>
+        <p>Photos captured from Yashi Bakery & Doodh Dairy.</p>
+      </div>
+      <div class="gallery">
+        <img src="assets/gallery-1.jpg" alt="Yashi Bakery entrance" onclick="openLightbox(this.src)">
+        <img src="assets/gallery-2.jpg" alt="Yashi Bakery shop" onclick="openLightbox(this.src)">
+        <img src="assets/gallery-3.jpg" alt="Products at the shop" onclick="openLightbox(this.src)">
+        <img src="assets/gallery-4.jpg" alt="Bakery display" onclick="openLightbox(this.src)">
+        <img src="assets/gallery-5.jpg" alt="Food products" onclick="openLightbox(this.src)">
+        <img src="assets/gallery-6.jpg" alt="Yashi shop interior" onclick="openLightbox(this.src)">
+        <img src="assets/gallery-7.jpg" alt="Cakes and pastries" onclick="openLightbox(this.src)">
+        <img src="assets/gallery-8.jpg" alt="Yashi Bakery poster" onclick="openLightbox(this.src)">
+      </div>
+    </section>
+
+    <section class="section location" id="location">
+      <div class="location-card">
+        <p class="eyebrow accent">VISIT US</p>
+        <h2>Find Yashi Bakery</h2>
+        <p class="address">📍 Near Shastri Park, Sabji Mandi, Guna, Madhya Pradesh</p>
+        <p>Come visit us for fresh dairy products and delicious bakery treats.</p>
+        <a class="btn btn-primary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Shastri+Park+Sabji+Mandi+Guna+Madhya+Pradesh">Open in Google Maps</a>
+      </div>
+      <div class="map-wrap">
+        <iframe title="Yashi Bakery location map" src="https://www.google.com/maps?q=Shastri%20Park%20Sabji%20Mandi%20Guna%20Madhya%20Pradesh&output=embed" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div>
+        <p class="eyebrow accent">GET IN TOUCH</p>
+        <h2>Contact Us</h2>
+      </div>
+      <div class="contact-items">
+        <a href="tel:+91971130001" class="contact-item"><span>📞</span><div><strong>Call Us</strong><small>97113 0001</small></div></a>
+        <div class="contact-item"><span>📍</span><div><strong>Visit Us</strong><small>Near Shastri Park, Sabji Mandi, Guna</small></div></div>
+      </div>
+    </section>
+
+    <section class="section feedback" id="feedback">
+      <div class="feedback-copy">
+        <p class="eyebrow accent">YOUR OPINION MATTERS</p>
+        <h2>Share Your Feedback</h2>
+        <p>Tell us about your experience. Your feedback helps Yashi Bakery & Doodh Dairy improve.</p>
+      </div>
+      <form class="feedback-form" onsubmit="submitForm(event, 'feedback')">
+        <label>Your Name<input required placeholder="Enter your name"></label>
+        <label>Rating
+          <select required><option value="">Choose a rating</option><option>⭐⭐⭐⭐⭐ Excellent</option><option>⭐⭐⭐⭐ Very Good</option><option>⭐⭐⭐ Good</option><option>⭐⭐ Average</option><option>⭐ Needs Improvement</option></select>
+        </label>
+        <label>Your Feedback<textarea required rows="5" placeholder="Write your feedback here..."></textarea></label>
+        <button class="btn btn-primary wide" type="submit">Submit Feedback</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>YASHI BAKERY</strong><span> & DOODH DAIRY</span></div>
+    <p>Fresh dairy. Delicious bakery. Made with care. 🥛🍰</p>
+    <small>© <span id="year"></span> Yashi Bakery & Doodh Dairy</small>
+  </footer>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()"><img id="lightboxImg" alt="Gallery image"></div>
+  <div class="toast" id="toast">Thank you! Your response has been recorded.</div>
+  <script src="script.js"></script>
+</body>
+</html>
