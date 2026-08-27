@@ -102,7 +102,7 @@
         <p>Select what you are looking for and send us your enquiry. We will contact you using the details you provide.</p>
         <div class="order-photo"><img src="assets/gallery-7.jpg" alt="Bakery products at Yashi Bakery"></div>
       </div>
-      <form class="order-form" onsubmit="submitForm(event, 'order')">
+      <form class="order-form" onsubmit="sendWhatsAppOrder(event)">
         <label>Your Name<input required name="name" placeholder="Enter your name"></label>
         <label>Phone Number<input required name="phone" type="tel" placeholder="Enter your phone number"></label>
         <label>What would you like to order?
@@ -116,7 +116,7 @@
           </select>
         </label>
         <label>Message<textarea name="message" rows="4" placeholder="Quantity or special request"></textarea></label>
-        <button class="btn btn-primary wide" type="submit">Send Order Enquiry</button>
+        <button class="btn btn-primary wide" type="submit">Order on WhatsApp</button>
         <p class="form-note">For quick contact, call us directly.</p>
         <a class="phone-link" href="tel:+91971130001">📞 97113 0001</a>
       </form>
@@ -189,6 +189,28 @@
 
   <div class="lightbox" id="lightbox" onclick="closeLightbox()"><img id="lightboxImg" alt="Gallery image"></div>
   <div class="toast" id="toast">Thank you! Your response has been recorded.</div>
+    <script>
+function sendWhatsAppOrder(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const name = form.querySelector('[name="name"]').value;
+  const phone = form.querySelector('[name="phone"]').value;
+  const product = form.querySelector('[name="product"]').value;
+  const message = form.querySelector('[name="message"]').value;
+
+  const businessNumber = "91971130001";
+
+  const text = `Hello Yashi Bakery! 👋
+
+I would like to place an order.
+
+👤 Name: ${name}
+📞 Phone: ${phone}
+🛍️ Product: ${product}
+📝 Details: ${message}
+Please confirm my order. Thank you!`;window.open(`https://wa.me/${businessNumber}?text=${encodeURIComponent(text)}`, "_blank");}
+    </script>
   <script src="script.js"></script>
 </body>
 </html>
