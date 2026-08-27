@@ -194,23 +194,23 @@ function sendWhatsAppOrder(event) {
   event.preventDefault();
 
   const form = event.target;
-  const name = form.querySelector('[name="name"]').value;
-  const phone = form.querySelector('[name="phone"]').value;
-  const product = form.querySelector('[name="product"]').value;
-  const message = form.querySelector('[name="message"]').value;
 
-  const businessNumber = "91971130001";
+  const name = form.querySelector('[name="name"]').value.trim();
+  const phone = form.querySelector('[name="phone"]').value.trim();
+  const product = form.querySelector('[name="product"]').value.trim();
+  const message = form.querySelector('[name="message"]').value.trim();
+
+  const businessNumber = "919171130001";
 
   const text = `Hello Yashi Bakery! 👋
 
 I would like to place an order.
 
 👤 Name: ${name}
-📞 Phone: ${phone}
+📞 Customer Phone: ${phone}
 🛍️ Product: ${product}
 📝 Details: ${message}
-Please confirm my order. Thank you!`;window.open(`https://wa.me/${businessNumber}?text=${encodeURIComponent(text)}`, "_blank");}
-    </script>
-  <script src="script.js"></script>
-</body>
-</html>
+
+Please confirm my order. Thank you! 🙏`;
+ const whatsappURL =`https://wa.me/${businessNumber}?text=${encodeURIComponent(text)}`;window.open(whatsappURL, "_blank");}
+</script>
