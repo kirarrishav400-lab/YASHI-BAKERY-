@@ -21,3 +21,6 @@ footer{padding:50px 7%;background:#2c1d15;color:#f7e8d7;text-align:center}footer
 @media(max-width:480px){h1{font-size:3.2rem}.hero{min-height:auto}.hero-image{height:360px}.hero-info{gap:12px}.product-grid{grid-template-columns:1fr 1fr;gap:10px}.product-card{padding:18px}.order-form,.feedback-form{padding:22px}.gallery{columns:2 120px;column-gap:9px}.gallery img{margin-bottom:9px}.section-heading{margin-bottom:28px}}
 .hero-image {width: 100%;max-width: 600px;margin: 0 auto;border-radius: 35px;overflow: hidden;line-height: 0;}
 .hero-image img {width: 100%;height: auto;display: block;object-fit: contain;}
+.site-footer {text-align: center;padding: 25px 15px;margin-top: 40px;background: #f5eee8;color: #333;font-size: 14px;}
+.site-footer p {margin: 5px 0;}
+.site-footer strong { font-weight: 700;}
